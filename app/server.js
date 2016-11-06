@@ -155,7 +155,6 @@ export function unlikeFeedItem(feedItemId, userId, cb) {
                         readDocument('users', userId)), cb);
 }
 
-
 export function likeCommentItem(feedItemId, userId, commentIndex, cb) {
   var feedItem = readDocument('feedItems', feedItemId);
 

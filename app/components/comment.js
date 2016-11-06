@@ -15,14 +15,14 @@ export default class Comment extends React.Component {
     if (clickEvent.button === 0) {
       var callbackFunction = (updatedLikeCounter) => {
         this.setState({likeCounter: updatedLikeCounter});
-     };
+      };
 
-     if (this.didUserLike()) {
+      if (this.didUserLike()) {
        unlikeCommentItem(this.props.feedItemId, 4, this.props.commentIndex, callbackFunction);
-     } else {
+      } else {
        likeCommentItem(this.props.feedItemId, 4, this.props.commentIndex, callbackFunction);
-     }
-   }
+      }
+    }
  }
 
  didUserLike() {
@@ -31,7 +31,7 @@ export default class Comment extends React.Component {
    // Look for a likeCounter entry with userId 4 -- which is the
    // current user.
    for (var i = 0; i < likeCounter.length; i++) {
-     if (likeCounter[i]._id === 4) {
+     if (likeCounter[i] === 4) {
        liked = true;
        break;
      }
